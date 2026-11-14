@@ -16,7 +16,11 @@ const Producto= sequelize.define('Producto', {
     stock: {
         type: DataTypes.INTEGER,
         defaultValue: 0
-    }
+    },
+    codigoBarras: {
+        type: DataTypes.STRING(50),
+        unique: true },
+
 
 }, {
     timestamps: true // Crea automaticamente createdAt y updatedAt
